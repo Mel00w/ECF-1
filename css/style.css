@@ -1,0 +1,1245 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    background:
+        url(../img/mobile/fumee-droite.png) no-repeat bottom right,
+        url(../img/mobile/fumee-gauche.png) no-repeat left,
+        url(../img/mobile/fumee-haut-droite.png) no-repeat top right,
+        url(../img/mobile/grain.png) repeat center,
+        linear-gradient(to bottom, #0F2C3E, #0F2C3E, #000);
+    background-size: auto, auto, auto, cover, cover;
+}
+
+
+/* MENU BURGER */
+
+/* Conteneur du menu burger */
+.burger-menu {
+    position: relative;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* S'assurer que le menu occupe toute la largeur de l'écran */
+}
+
+/* Conteneur du menu burger pour positionner le logo */
+.burger-nav {
+    position: relative;
+    /* Permet de positionner les éléments enfants avec position absolue */
+    width: 100%;
+    /* Le menu burger occupe toute la largeur */
+}
+
+/* Logo en haut à droite */
+.logo-container {
+    position: absolute;
+    top: 1rem;
+    /* Augmenter l'espace du logo par rapport au haut */
+    right: 4rem;
+    /* Augmenter l'espace du logo par rapport au côté droit */
+    width: 8rem;
+    /* Ajuste la taille du logo */
+    height: auto;
+    /* Garde les proportions */
+}
+
+/* Bouton du menu burger */
+.burger-btn {
+    position: absolute;
+    top: 1rem;
+    /* Positionne le bouton burger à 1rem du haut */
+    left: 1rem;
+    /* Positionne le bouton burger à 1rem du côté gauche */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 1100;
+}
+
+.burger-btn span {
+    display: block;
+    height: 0.29rem;
+    /* Hauteur de chaque barre */
+    width: 160%;
+    background-color: #fff;
+    border-radius: 0.125rem;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Navigation cachée par défaut */
+.burger-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Pleine largeur vw = largeur de fenêtre */
+    height: 100vh;
+    /* Pleine hauteur */
+    background:
+        url(../img/desktop/lines-dark-desktop.png) no-repeat center,
+        linear-gradient(to bottom, #0F2C3E, #000);
+    background-size: auto;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Centre les éléments horizontalement */
+    padding-top: 3rem;
+    /* Espace au-dessus du menu */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+/* Rejoignez-nous et logos */
+.join-us {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.join-us p {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.logos-container i {
+    font-size: 2rem;
+}
+
+/* Liste des liens de navigation */
+.burger-nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 5rem;
+    /* Espace sous le logo */
+    width: 100%;
+    /* Occupe toute la largeur */
+}
+
+.burger-nav ul li {
+    margin: 2rem 0;
+    /* Espacement entre les éléments du menu */
+}
+
+.burger-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    /* Taille de police en rem */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.burger-nav ul li a:hover {
+    color: #1D6A75;
+    /* Change la couleur au survol */
+}
+
+/* Menu visible */
+
+.intro-history p {
+    font-style: italic;
+    font-family: "Lora", serif;
+    font-weight: 100;
+    font-size: .8rem;
+    text-transform: none;
+}
+
+.mobile-menu h1 {
+   font-size: 1rem ;
+}
+
+.banniere-card {
+    width: 100%;
+    object-fit: cover;
+    /* Assure que l'image couvre toute la largeur et hauteur */
+}
+
+.burger-menu.open .burger-nav {
+    transform: translateY(0);
+    /* Affiche le menu sur toute la page */
+}
+
+.desktop-menu {
+    display: none;
+    /* Cache le menu classique en mobile */
+}
+
+.burger-menu {
+    display: block;
+    /* Garde le menu burger en mobile */
+}
+
+/* PAGE D'ACCUEIL INDEX*/
+
+header {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .7rem;
+    color: #fff;
+}
+
+header h1 {
+    padding-top: 1%;
+    margin-bottom: 1.2rem;
+}
+
+/* boutton */
+
+a.button {
+    display: block;
+    height: 2.7rem;
+    line-height: 2.7rem;
+    padding: 0 1.5rem;
+    border-radius: 1.5rem;
+    background-color: #1D6A75;
+    color: #000000;
+    text-decoration: none;
+    box-shadow: 0 2px 2px #1D6A75;
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+a.button:hover {
+    background-color: #0F2C3E;
+    box-shadow: 0 2px 2px #0F2C3E;
+}
+
+/*MAIN CARTES NOM DES LEGENDES*/
+
+main {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.card {
+    position: relative;
+    /* Pour positionner le texte */
+    overflow: hidden;
+    /* Pour cacher tout ce qui dépasse */
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s;
+    font-family: "Lora", serif;
+    font-weight: bold;
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    /* Pour le texte superposé */
+}
+
+.text-overlay {
+    position: absolute;
+    /* Pour positionner le texte */
+    top: 80%;
+    /* Place le texte au milieu verticalement */
+    left: 50%;
+    /* Place le texte au milieu horizontalement */
+    transform: translate(-50%, -50%);
+    /* Centrage exact */
+    color: white;
+    /* Texte blanc */
+    font-size: .6rem;
+    /* Taille du texte */
+    text-align: center;
+    font-family: "Lora", serif;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.card img {
+    transform: scale(1);
+    transition: all .3s ease;
+}
+
+.card:hover img {
+    filter: brightness(50%);
+    /* Assombrit l'image */
+    transform: scale(1.1);
+}
+
+.card:hover .text-overlay {
+    color: #1D6A75;
+    transform: translate(-50%, -50%) scale(1.1);
+    /* Légèrement plus grand */
+}
+
+.desktop-banner {
+    display: none;
+    /* Par défaut, cachée */
+}
+
+.banner-subtext {
+    display: none;
+}
+
+/* BOUTON CATEGORIE*/
+
+.button-end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0;
+}
+
+/* FOOTER */
+
+footer {
+    font-size: .5rem;
+    padding: .2rem;
+    font-family: "Cinzel", serif;
+    color: white;
+    text-align: center;
+    background-color: #121212;
+}
+
+/* CATEGORIE */
+
+main.category {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+.card-category,
+.card-creature,
+.card-dimension,
+.card-phenomene,
+.card-numerique {
+    position: relative;
+    /* Pour positionner le texte */
+    overflow: hidden;
+    /* Pour cacher tout ce qui dépasse */
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.card-category a,
+.card-creature a,
+.card-dimension a,
+.card-phenomene a,
+.card-numerique a {
+    font-family: "Lora", serif;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    /* Pour le texte superposé */
+}
+
+.card-category img,
+.card-creature img,
+.card-dimension img,
+.card-phenomene img,
+.card-numerique img {
+    transform: scale(1);
+    transition: all .3s ease;
+}
+
+.card-category:hover img,
+.card-creature:hover img,
+.card-dimension:hover img,
+.card-phenomene:hover img,
+.card-numerique:hover img {
+    filter: brightness(50%);
+    /* Assombrit l'image */
+    transform: scale(1.1);
+
+}
+
+.card-category:hover .text-overlay,
+.card-creature:hover .text-overlay,
+.card-dimension:hover .text-overlay,
+.card-phenomene:hover .text-overlay,
+.card-numerique:hover .text-overlay {
+    color: #1D6A75;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* A PROPOS */
+
+
+main.propos {
+    margin: 3% 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    gap: 2rem;
+}
+
+
+.card-propos {
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s;
+    background-color: #ffffff10;
+    border-radius: 2.5rem;
+    color: white;
+    font-family: "Roboto", serif;
+}
+
+.card-propos h2 {
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.img-transparent {
+    position: relative;
+
+    /* Masque pour la transparence */
+    -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+
+    /* S'assurer que l'image ne répète pas et s'adapte bien */
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+/* SYNDROME LAVANVILLE*/
+
+.card-history {
+    margin: 5% 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "Lora", serif;
+
+}
+
+.card-history section {
+    margin: 0 auto;
+}
+
+.card-history iframe{
+    margin: 8% auto;
+}
+
+.card-history img {
+margin: 15% 0;
+width: 20rem;
+}
+
+.history-illustr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.history-illustr p {
+    font-style: italic;
+}
+
+.history {
+    padding: 5%;
+    box-shadow: 0 0 10px 5px #0F2C3E;
+    background-color: #0F2C3E;
+}
+
+.card-history h2 {
+    margin: 5% 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+    /*EASTER EGGS*/
+    .easter-eggs img {
+        width: 1rem;
+        filter: blur(2px);
+        transition: all .3s ease;
+    }
+
+    .easter-eggs img:hover {
+        filter: none;
+    }
+
+    .easter-eggs {
+        display: flex;
+        justify-content: end;
+    }
+
+
+
+/* MEDIA QUERIES */
+
+
+/*Main accueil : carte nom des légendes*/
+
+@media (max-width: 450px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /*HEADER INDEX*/
+
+    /*menu*/
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .burger-menu {
+        display: none;
+        /* enleve le menu burger en desktop */
+    }
+
+    
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Ajuste cet espace si nécessaire */
+}
+
+.social-links a {
+    margin-right: 15px; /* Assure qu'il y a de l'espace entre les icônes */
+    display: inline-block;
+}
+
+.social-links a:focus {
+    color: #1D6A75;
+}
+
+.desktop-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.desktop-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.desktop-join-us {
+    display: flex;
+    align-items: center; /* Aligne le texte et les icônes au centre verticalement */
+}
+
+.desktop-join-us a {
+    margin-right: 15px; 
+    color: white;
+    font-size: 1.4rem;
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+}
+
+.social-links {
+    display: flex; /* Pour aligner les icônes horizontalement */
+}
+
+.social-links a {
+    margin-right: 10px; /* Espacement entre les icônes */
+}
+
+.social-links i {
+    font-size: 2rem; /* Ajuste la taille des icônes */
+}
+
+.social-links a:focus {
+    color: #0F2C3E; /* Changer la couleur des icônes au survol */
+}
+
+
+    .desktop-menu {
+        display: flex;
+        justify-content: center;
+        background-color: #d9d9d909;
+        height: 7rem;
+        padding: 1rem 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: top 0.3s ease-in-out;
+    }
+
+    
+    /* Ajuste la taille des icônes */
+    .social-links i {
+        font-size: 2.5rem; /* Plus grand si nécessaire */
+    }
+
+    .hide-menu {
+        top: -10rem;
+        /* Cache le menu en le déplaçant au-dessus de l'écran */
+    }
+
+    .desktop-menu ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .desktop-menu img {
+        margin-top: -10px;
+    }
+
+    .desktop-menu ul li a {
+        display: block;
+        height: 7rem;
+        line-height: 7rem;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.4rem;
+        font-family: "Lora", serif;
+        text-transform: uppercase;
+        transition: color 0.3s;
+    }
+
+    .desktop-menu ul li:last-child a {
+        font-size: 0.8rem;
+    }
+
+    .desktop-menu ul li a i {
+        font-size: 2rem;
+        margin: 0 0.5rem;
+    }
+
+
+    .desktop-menu ul li a:hover {
+        color: #1D6A75;
+        /* Effet au survol */
+    }
+
+
+    .desktop-banner {
+        position: relative;
+        /* Permet de positionner le texte à l'intérieur de la bannière */
+        display: block;
+        margin-top: 6%;
+        width: 100%;
+        background: none;
+    }
+
+    .desktop-banner img {
+        width: 100%;
+        object-fit: cover;
+        /* Assure que l'image couvre toute la largeur et hauteur */
+    }
+
+    .banner-text {
+        position: absolute;
+        /* Positionner le texte par-dessus l'image */
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Ajuste précisément pour centrer */
+        color: white;
+        font-size: 1.25rem;
+        font-weight: bold;
+        font-family: "Cinzel", serif;
+        text-align: center;
+    }
+
+    .text-top {
+     top: 35%;
+     font-size: 1.7rem;
+    }
+
+    .banner-subtext {
+        display: block;
+        text-align: center;
+        margin: 1rem auto;
+        font-size: 1rem;
+        color: #fff;
+        font-family: "Lora", serif;
+        line-height: 1.5;
+    }
+
+
+    /*Main accueil : carte nom des légendes*/
+
+    .text-overlay {
+        font-size: 1.25rem;
+        top: 90%;
+        /* Place le texte au milieu verticalement */
+    }
+
+    .card a img {
+        content: url(../img/desktop/pokémon-desktop.png);
+    }
+
+    .card:nth-child(2) a img {
+        content: url(../img/desktop/nessy-desktop.png);
+    }
+
+    .card:nth-child(3) a img {
+        content: url(../img/desktop/chupacabra-desktop.png);
+    }
+
+    .card:nth-child(4) a img {
+        content: url(../img/desktop/atlantide-desktop.png);
+    }
+
+    .card:nth-child(5) a img {
+        content: url(../img/desktop/dame-blanche-desktop.png);
+    }
+
+    .card:nth-child(6) a img {
+        content: url(../img/desktop/jorogumo-desktop.png);
+    }
+
+    .card:nth-child(7) a img {
+        content: url(../img/desktop/nurarhyion-desktop.png);
+    }
+
+    .card:nth-child(8) a img {
+        content: url(../img/desktop/minotaure-desktop.png);
+    }
+
+    .card:nth-child(9) a img {
+        content: url(../img/desktop/bermude-desktop.png);
+    }
+
+    .card:nth-child(10) a img {
+        content: url(../img/desktop/slender-man-desktop.png);
+    }
+
+    .card:nth-child(11) a img {
+        content: url(../img/desktop/jeff-the-killer-desktop.png);
+    }
+
+    .card:nth-child(12) a img {
+        content: url(../img/desktop/sonic-desktop.png);
+    }
+
+    .card:nth-child(13) a img {
+        content: url(../img/desktop/scp-desktop.png);
+    }
+
+    .card:nth-child(14) a img {
+        content: url(../img/desktop/backroom-desktop.png);
+    }
+
+    .card:nth-child(15) a img {
+        content: url(../img/desktop/wendigo-desktop.png);
+    }
+
+    /* CARD CATEGORIE*/
+
+    .card-category a img {
+        content: url(../img/desktop/creature-entite-mysterieuse-desktop.png);
+    }
+
+    .card-category:nth-child(2) a img {
+        content: url(../img/desktop/lieu-dimansion-etrange-desktop.png);
+    }
+
+    .card-category:nth-child(3) a img {
+        content: url(../img/desktop/phenomene-inexplique-anomalie-desktop.png);
+    }
+
+    .card-category:nth-child(4) a img {
+        content: url(../img/desktop/horreur-numerique-jeux-maudit-desktop.png);
+    }
+
+    main.category {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-creature a img {
+        content: url(../img/desktop/jorogumo-desktop.png);
+    }
+
+    .card-creature:nth-child(2) a img {
+        content: url(../img/desktop/nessy-desktop.png);
+    }
+
+    .card-creature:nth-child(3) a img {
+        content: url(../img/desktop/nurarhyion-desktop.png);
+    }
+
+    .card-creature:nth-child(4) a img {
+        content: url(../img/desktop/dame-blanche-desktop.png)
+    }
+
+    .card-creature:nth-child(5) a img {
+        content: url(../img/desktop/minotaure-desktop.png);
+    }
+
+    .card-creature:nth-child(6) a img {
+        content: url(../img/desktop/chupacabra-desktop.png);
+    }
+
+    .card-creature:nth-child(7) a img {
+        content: url(../img/desktop/sonic-desktop.png);
+    }
+
+    .card-creature:nth-child(8) a img {
+        content: url(../img/desktop/jeff-the-killer-desktop.png);
+    }
+
+    .card-creature:nth-child(9) a img {
+        content: url(../img/desktop/wendigo-desktop.png);
+    }
+
+    .card-creature:nth-child(10) a img {
+        content: url(../img/desktop/slender-man-desktop.png);
+    }
+
+    /* CREATURE ET LEGENDES*/
+
+    .card-dimension a img {
+        content: url(../img/desktop/pokémon-desktop.png);
+    }
+
+    .card-dimension:nth-child(2) a img {
+        content: url(../img/desktop/atlantide-desktop.png);
+    }
+
+    .card-dimension:nth-child(3) a img {
+        content: url(../img/desktop/backroom-desktop.png);
+    }
+
+    .card-dimension:nth-child(4) a img {
+        content: url(../img/desktop/bermude-desktop.png);
+    }
+
+    /* PHENOMENE INEXPLIQUES ANOMALIES*/
+
+    .card-phenomene a img {
+        content: url(../img/desktop/pokémon-desktop.png);
+    }
+
+    .card-phenomene:nth-child(2) a img {
+        content: url(../img/desktop/nessy-desktop.png);
+    }
+
+    .card-phenomene:nth-child(3) a img {
+        content: url(../img/desktop/sonic-desktop.png);
+    }
+
+    .card-phenomene:nth-child(4) a img {
+        content: url(../img/desktop/atlantide-desktop.png)
+    }
+
+    .card-phenomene:nth-child(5) a img {
+        content: url(../img/desktop/backroom-desktop.png);
+    }
+
+    .card-phenomene:nth-child(6) a img {
+        content: url(../img/desktop/scp-desktop.png);
+    }
+
+    /* PHENOMENE INEXPLIQUES ANOMALIES*/
+
+    .card-numerique a img {
+        content: url(../img/desktop/pokémon-desktop.png);
+    }
+
+    .card-numerique:nth-child(2) a img {
+        content: url(../img/desktop/sonic-desktop.png);
+    }
+
+    .card-numerique:nth-child(3) a img {
+        content: url(../img/desktop/backroom-desktop.png);
+    }
+
+    .card-numerique:nth-child(4) a img {
+        content: url(../img/desktop/scp-desktop.png)
+    }
+
+
+    /* A PROPOS */
+
+    main.propos {
+        margin: 3% 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .card-propos {
+        display: flex;
+        /* Centrer le texte à l'intérieur */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30rem;
+        height: 24.3rem;
+        padding: 1rem;
+        text-align: center;
+        transition: all 0.3s;
+        background-color: #ffffff10;
+        border-radius: 10px;
+        color: white;
+        font-family: "Roboto", serif;
+    }
+
+    .card-propos h2 {
+        margin-bottom: 2%;
+        font-family: "Cinzel", serif;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .propos img {
+        content: url(../img/desktop/merci-desktop.png);
+    }
+
+    /* SYNDROME LAVANVILLE*/
+
+    .card-history{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .history-illustr {
+        padding: 0 5%;
+    }
+
+    .history-illustr img {
+        width: 30rem;
+    }
+
+    .intro-history {
+      font-size:  1.25rem; 
+    }
+
+    /*FOOTER*/
+    footer {
+        font-size: 1rem;
+    }
+
+    /*EASTER EGGS*/
+
+
+/* Style pour la vidéo en arrière-plan */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Assure que la vidéo reste derrière le contenu */
+}
+
+/* Positionnement de la vidéo */
+#background-video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que la vidéo couvre toute la zone */
+    transform: translate(-50%, -50%);
+}
+
+/* Style pour le contenu (texte) */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrer le texte */
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Couche semi-transparente pour améliorer la lisibilité */
+    padding: 20px; /* Un peu d'espace autour du texte */
+    border-radius: 10px; /* Coins arrondis pour le texte */
+    z-index: 1; /* S'assurer que le texte est au-dessus de la vidéo */
+}
+
+.content h1 {
+    font-size: 3rem; /* Ajuste la taille du titre */
+}
+
+.content p {
+    font-size: 1.5rem; /* Ajuste la taille du texte */
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.jumpscare img {
+width:100vw;
+height: 100vw;
+}
+
+/* Animation pour l'effet "chute" */
+.falling {
+    animation: fallShrink 1.5s forwards;
+}
+
+@keyframes fallShrink {
+    0% {
+        transform: translateY(0) scale(1);  /* Position initiale et taille normale */
+    }
+    50% {
+        transform: translateY(50vh) scale(0.5);  /* Réduit la taille de moitié */
+    }
+    100% {
+        transform: translateY(100vh) scale(0);  /* Fait tomber l'élément hors de l'écran et le réduit complètement */
+    }
+}
+
+/* Message d'horreur */
+.horror-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrer le message */
+    font-size: 3rem;
+    font-family: 'Creepster', cursive;
+    text-align: center;
+    color: white;
+    z-index: 1000; 
+    animation: fadeIn 2s forwards; 
+}
+
+/* Animation d'apparition du message d'horreur */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+body.falling-background {
+    background: red;
+    transition: background 1s ease-in-out;
+}
+
+/* léger fondu noir au fond d'écran */
+body.falling-background::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Couvre légèrement */
+    z-index: -1;
+    opacity: 0;
+    animation: overlayFade 1.5s forwards;
+}
+
+/* Animation pour fondu du fond */
+@keyframes overlayFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Jumpscare */
+.jumpscare {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6666;
+    opacity: 0;
+    animation: jumpIn 0.5s ease forwards; /* Animation d'apparition */
+}
+
+/* Animation de l'apparition du jumpscare */
+@keyframes jumpIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%) scale(0.5); /* Commence plus petit et flou */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1); /* Devient à sa taille normale */
+    }
+}
