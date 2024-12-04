@@ -584,7 +584,6 @@ main.propos {
     justify-content: center;
 }
 
-/* Fond général du formulaire */
 form {
     background-color: #2C3E50;
     color: #ffffff; 
@@ -596,19 +595,16 @@ form {
     max-width: 800px;
 }
 
-/* Groupes de champs (labels et inputs) */
 .form-group {
     margin-bottom: 20px;
 }
 
-/* Labels des champs */
 label {
     font-weight: bold;
     font-size: 1.1rem;
     color: #ffffff; 
 }
 
-/* Champs de texte (input et textarea) */
 input[type="text"], textarea {
     width: 95%;
     padding: 12px;
@@ -620,7 +616,6 @@ input[type="text"], textarea {
     transition: border-color 0.3s ease;
 }
 
-/* Focus sur les champs de texte */
 input[type="text"]:focus, textarea:focus {
     border-color: #1D6A75; 
     outline: none;
