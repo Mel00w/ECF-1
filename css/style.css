@@ -252,7 +252,7 @@ body {
 }
 
 .mobile-menu h1 {
-   font-size: 1rem ;
+    font-size: 1rem;
 }
 
 .banniere-card {
@@ -331,7 +331,6 @@ main {
     position: relative;
     /* Pour positionner le texte */
     overflow: hidden;
-    /* Pour cacher tout ce qui dépasse */
     padding: 1rem;
     text-align: center;
     transition: all 0.3s;
@@ -505,18 +504,13 @@ main.propos {
 
 .img-transparent {
     position: relative;
-
     /* Masque pour la transparence */
-    -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
-
-    /* S'assurer que l'image ne répète pas et s'adapte bien */
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 95%);
+    mask-image: linear-gradient(to bottom, black 20%, transparent 95%);
 }
 
 /* SYNDROME LAVANVILLE*/
-.intro-history > p {
+.intro-history>p {
     padding: 0 5%;
 }
 
@@ -533,13 +527,13 @@ main.propos {
     margin: 0 auto;
 }
 
-.card-history iframe{
+.card-history iframe {
     margin: 8% auto;
 }
 
 .card-history img {
-margin: 15% 0;
-width: 20rem;
+    margin: 15% 0;
+    width: 20rem;
 }
 
 .history-illustr {
@@ -567,23 +561,93 @@ width: 20rem;
 }
 
 
-    /*EASTER EGGS*/
-    .easter-eggs img {
-        width: 1rem;
-        filter: blur(2px);
-        transition: all .3s ease;
-    }
+/*EASTER EGGS*/
+.easter-eggs img {
+    width: 1rem;
+    filter: blur(2px);
+    transition: all .3s ease;
+}
 
-    .easter-eggs img:hover {
-        filter: none;
-    }
+.easter-eggs img:hover {
+    filter: none;
+}
 
-    .easter-eggs {
-        display: flex;
-        justify-content: end;
-    }
+.easter-eggs {
+    display: flex;
+    justify-content: end;
+}
+
+/*AJOUTER UNE HISTOIRE*/
+
+#flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Fond général du formulaire */
+form {
+    background-color: #2C3E50;
+    color: #ffffff; 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Groupes de champs (labels et inputs) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels des champs */
+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff; 
+}
+
+/* Champs de texte (input et textarea) */
+input[type="text"], textarea {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #34495e; 
+    border-radius: 5px;
+    background-color: #34495e;
+    color: #ffffff; 
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus sur les champs de texte */
+input[type="text"]:focus, textarea:focus {
+    border-color: #1D6A75; 
+    outline: none;
+}
 
 
+button.submit-button {
+    background-color: #1D6A75; 
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-button:hover {
+    background-color: #16a085; 
+}
+
+/* Bordure et ombre sur les champs de texte */
+input[type="text"], textarea {
+    background-color: #34495e;
+    color: #fff;
+    border: 1px solid #7f8c8d;
+}
 
 /* MEDIA QUERIES */
 
@@ -611,63 +675,70 @@ width: 20rem;
         /* enleve le menu burger en desktop */
     }
 
-    
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px; /* Ajuste cet espace si nécessaire */
-}
 
-.social-links a {
-    margin-right: 15px; /* Assure qu'il y a de l'espace entre les icônes */
-    display: inline-block;
-}
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        /* Ajuste cet espace si nécessaire */
+    }
 
-.social-links a:focus {
-    color: #1D6A75;
-}
+    .social-links a {
+        margin-right: 15px;
+        /* Assure qu'il y a de l'espace entre les icônes */
+        display: inline-block;
+    }
 
-.desktop-menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-}
+    .social-links a:focus {
+        color: #1D6A75;
+    }
 
-.desktop-menu li {
-    display: inline-block;
-    margin-right: 20px;
-}
+    .desktop-menu ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
 
-.desktop-join-us {
-    display: flex;
-    align-items: center; /* Aligne le texte et les icônes au centre verticalement */
-}
+    .desktop-menu li {
+        display: inline-block;
+        margin-right: 20px;
+    }
 
-.desktop-join-us a {
-    margin-right: 15px; 
-    color: white;
-    font-size: 1.4rem;
-    font-family: "Cinzel", serif;
-    font-weight: bold;
-}
+    .desktop-join-us {
+        display: flex;
+        align-items: center;
+        /* Aligne le texte et les icônes au centre verticalement */
+    }
 
-.social-links {
-    display: flex; /* Pour aligner les icônes horizontalement */
-}
+    .desktop-join-us a {
+        margin-right: 15px;
+        color: white;
+        font-size: 1.4rem;
+        font-family: "Cinzel", serif;
+        font-weight: bold;
+    }
 
-.social-links a {
-    margin-right: 10px; /* Espacement entre les icônes */
-}
+    .social-links {
+        display: flex;
+        /* Pour aligner les icônes horizontalement */
+    }
 
-.social-links i {
-    font-size: 2rem; /* Ajuste la taille des icônes */
-}
+    .social-links a {
+        margin-right: 10px;
+        /* Espacement entre les icônes */
+    }
 
-.social-links a:focus {
-    color: #0F2C3E; /* Changer la couleur des icônes au survol */
-}
+    .social-links i {
+        font-size: 2rem;
+        /* Ajuste la taille des icônes */
+    }
+
+    .social-links a:focus {
+        color: #0F2C3E;
+        /* Changer la couleur des icônes au survol */
+    }
 
 
     .desktop-menu {
@@ -682,10 +753,11 @@ width: 20rem;
         transition: top 0.3s ease-in-out;
     }
 
-    
+
     /* Ajuste la taille des icônes */
     .social-links i {
-        font-size: 2.5rem; /* Plus grand si nécessaire */
+        font-size: 2.5rem;
+        /* Plus grand si nécessaire */
     }
 
     .hide-menu {
@@ -701,7 +773,8 @@ width: 20rem;
     }
 
     .desktop-menu img {
-        margin-top: -10px;
+        margin-top: -.2rem ;
+        width: 120%;
     }
 
     .desktop-menu ul li a {
@@ -762,8 +835,8 @@ width: 20rem;
     }
 
     .text-top {
-     top: 35%;
-     font-size: 1.4rem;
+        top: 35%;
+        font-size: 1.4rem;
     }
 
     .banner-subtext {
@@ -986,7 +1059,7 @@ width: 20rem;
         justify-content: center;
         align-items: center;
         height: 15rem;
-        padding: 1rem ;
+        padding: 1rem;
         margin: 0 30px;
         text-align: center;
         transition: all 0.3s;
@@ -1009,7 +1082,7 @@ width: 20rem;
 
     /* SYNDROME LAVANVILLE*/
 
-    .card-history{
+    .card-history {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -1025,18 +1098,19 @@ width: 20rem;
     }
 
     .intro-history {
-      font-size:  1.5rem; 
+        font-size: 1.5rem;
     }
+
     .intro-history img {
-        margin-bottom: 1%; 
-      }
+        margin-bottom: 1%;
+    }
 
     .intro-history p {
         font-size: 1.1rem;
         margin-top: 2%;
     }
 
-    .intro-history > div > p {
+    .intro-history>div>p {
         padding: 0 5%;
     }
 
@@ -1048,49 +1122,58 @@ width: 20rem;
     /*EASTER EGGS*/
 
 
-/* Style pour la vidéo en arrière-plan */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Assure que la vidéo reste derrière le contenu */
-}
+    /* Style pour la vidéo en arrière-plan */
+    .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+        /* Assure que la vidéo reste derrière le contenu */
+    }
 
-/* Positionnement de la vidéo */
-#background-video {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Assure que la vidéo couvre toute la zone */
-    transform: translate(-50%, -50%);
-}
+    /* Positionnement de la vidéo */
+    #background-video {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Assure que la vidéo couvre toute la zone */
+        transform: translate(-50%, -50%);
+    }
 
-/* Style pour le contenu (texte) */
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centrer le texte */
-    color: white;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* Couche semi-transparente pour améliorer la lisibilité */
-    padding: 20px; /* Un peu d'espace autour du texte */
-    border-radius: 10px; /* Coins arrondis pour le texte */
-    z-index: 1; /* S'assurer que le texte est au-dessus de la vidéo */
-}
+    /* Style pour le contenu (texte) */
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Centrer le texte */
+        color: white;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        /* Couche semi-transparente pour améliorer la lisibilité */
+        padding: 20px;
+        /* Un peu d'espace autour du texte */
+        border-radius: 10px;
+        /* Coins arrondis pour le texte */
+        z-index: 1;
+        /* S'assurer que le texte est au-dessus de la vidéo */
+    }
 
-.content h1 {
-    font-size: 3rem; /* Ajuste la taille du titre */
-}
+    .content h1 {
+        font-size: 3rem;
+        /* Ajuste la taille du titre */
+    }
 
-.content p {
-    font-size: 1.5rem; /* Ajuste la taille du texte */
-}
+    .content p {
+        font-size: 1.5rem;
+        /* Ajuste la taille du texte */
+    }
 
 
 }
@@ -1157,8 +1240,8 @@ width: 20rem;
 
 
 .jumpscare img {
-width:100vw;
-height: 100vw;
+    width: 100vw;
+    height: 100vw;
 }
 
 /* Animation pour l'effet "chute" */
@@ -1168,13 +1251,18 @@ height: 100vw;
 
 @keyframes fallShrink {
     0% {
-        transform: translateY(0) scale(1);  /* Position initiale et taille normale */
+        transform: translateY(0) scale(1);
+        /* Position initiale et taille normale */
     }
+
     50% {
-        transform: translateY(50vh) scale(0.5);  /* Réduit la taille de moitié */
+        transform: translateY(50vh) scale(0.5);
+        /* Réduit la taille de moitié */
     }
+
     100% {
-        transform: translateY(100vh) scale(0);  /* Fait tomber l'élément hors de l'écran et le réduit complètement */
+        transform: translateY(100vh) scale(0);
+        /* Fait tomber l'élément hors de l'écran et le réduit complètement */
     }
 }
 
@@ -1184,13 +1272,14 @@ height: 100vw;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centrer le message */
+    transform: translate(-50%, -50%);
+    /* Centrer le message */
     font-size: 3rem;
     font-family: 'Creepster', cursive;
     text-align: center;
     color: white;
-    z-index: 1000; 
-    animation: fadeIn 2s forwards; 
+    z-index: 1000;
+    animation: fadeIn 2s forwards;
 }
 
 /* Animation d'apparition du message d'horreur */
@@ -1199,6 +1288,7 @@ height: 100vw;
         opacity: 0;
         transform: translate(-50%, -60%);
     }
+
     100% {
         opacity: 1;
         transform: translate(-50%, -50%);
@@ -1218,7 +1308,8 @@ body.falling-background::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Couvre légèrement */
+    background: rgba(0, 0, 0, 0.7);
+    /* Couvre légèrement */
     z-index: -1;
     opacity: 0;
     animation: overlayFade 1.5s forwards;
@@ -1229,6 +1320,7 @@ body.falling-background::before {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -1236,24 +1328,33 @@ body.falling-background::before {
 
 /* Jumpscare */
 .jumpscare {
-    display: none; 
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 6666;
     opacity: 0;
-    animation: jumpIn 0.5s ease forwards; /* Animation d'apparition */
+    animation: jumpIn 0.5s ease forwards;
+    /* Animation d'apparition */
 }
 
 /* Animation de l'apparition du jumpscare */
 @keyframes jumpIn {
     0% {
         opacity: 0;
-        transform: translate(-50%, -60%) scale(0.5); /* Commence plus petit et flou */
+        transform: translate(-50%, -60%) scale(0.5);
+        /* Commence plus petit et flou */
     }
+
     100% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1); /* Devient à sa taille normale */
+        transform: translate(-50%, -50%) scale(1);
+        /* Devient à sa taille normale */
     }
 }
+
+
+
+
+

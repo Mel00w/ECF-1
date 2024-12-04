@@ -92,9 +92,6 @@ window.addEventListener('scroll', function () {
 
 
 
-
-
-
 // Fonction pour ajouter des animations
 function triggerAnimations() {
   // Activer l'animation de fond et afficher le message d'horreur
@@ -107,9 +104,9 @@ function triggerAnimations() {
   setTimeout(function() {
     const jumpscare = document.querySelector('.jumpscare');
     jumpscare.style.display = 'block'; // Rendre le jumpscare visible
-    jumpscare.style.animation = 'jumpIn 0.5s ease forwards'; // Animation jumpscare
+    jumpscare.style.animation = 'jumpIn 0.2s ease forwards'; // Animation jumpscare
     document.getElementById('jumpscare-sound').play(); // Jouer le son
-  }, 5000); // Délai avant l'apparition du jumpscare
+  }, 2000); // Délai avant l'apparition du jumpscare
 }
 
 // Fonction pour appliquer la classe "falling" à tous les éléments
