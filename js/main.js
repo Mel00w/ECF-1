@@ -96,16 +96,22 @@ window.addEventListener('scroll', function () {
 function triggerAnimations() {
   // Activer l'animation de fond et afficher le message d'horreur
   document.body.classList.add('falling-background');
+  
   const horrorMessage = document.querySelector('.horror-message');
-  horrorMessage.style.display = 'block'; // Afficher le message d'horreur
-  horrorMessage.style.animation = 'fadeIn 2s forwards'; // Animation du message
+  if (horrorMessage) {
+    horrorMessage.style.display = 'block'; // Afficher le message
+    horrorMessage.style.animation = 'fadeIn 2s forwards'; // Animation du message
+  }
 
-  // Après 5 secondes, afficher le jumpscare et jouer le son
-  setTimeout(function() {
+  // Après 2 secondes, afficher le jumpscare et jouer le son
+  setTimeout(function () {
     const jumpscare = document.querySelector('.jumpscare');
-    jumpscare.style.display = 'block'; // Rendre le jumpscare visible
-    jumpscare.style.animation = 'jumpIn 0.2s ease forwards'; // Animation jumpscare
-    document.getElementById('jumpscare-sound').play(); // Jouer le son
+    if (jumpscare) {
+      jumpscare.style.display = 'block'; // Rendre le jumpscare visible
+      jumpscare.style.animation = 'jumpIn 0.2s ease forwards'; // Animation jumpscare
+    }
+    const jumpscareSound = document.getElementById('jumpscare-sound');
+    if (jumpscareSound) jumpscareSound.play(); // Jouer le son
   }, 2000); // Délai avant l'apparition du jumpscare
 }
 

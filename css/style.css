@@ -96,7 +96,7 @@ body {
         url(../img/mobile/fumee-droite.png) no-repeat bottom right,
         url(../img/mobile/fumee-gauche.png) no-repeat left,
         url(../img/mobile/fumee-haut-droite.png) no-repeat top right,
-        url(../img/mobile/grain.png) repeat center,
+        url(../img/mobile/grain.webp) repeat center,
         linear-gradient(to bottom, #0F2C3E, #0F2C3E, #000);
     background-size: auto, auto, auto, cover, cover;
 }
@@ -356,7 +356,7 @@ main {
     /* Centrage exact */
     color: white;
     /* Texte blanc */
-    font-size: .6rem;
+    font-size: .8rem;
     /* Taille du texte */
     text-align: center;
     font-family: "Lora", serif;
