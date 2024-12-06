@@ -3,87 +3,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -93,9 +26,9 @@ video {
 
 body {
     background:
-        url(../img/mobile/fumee-droite.png) no-repeat bottom right,
-        url(../img/mobile/fumee-gauche.png) no-repeat left,
-        url(../img/mobile/fumee-haut-droite.png) no-repeat top right,
+        url(../img/mobile/fumee-droite.webp) no-repeat bottom right,
+        url(../img/mobile/fumee-gauche.webp) no-repeat left,
+        url(../img/mobile/fumee-haut-droite.webp) no-repeat top right,
         url(../img/mobile/grain.webp) repeat center,
         linear-gradient(to bottom, #0F2C3E, #0F2C3E, #000);
     background-size: auto, auto, auto, cover, cover;
@@ -111,37 +44,28 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    /* S'assurer que le menu occupe toute la largeur de l'écran */
 }
 
 /* Conteneur du menu burger pour positionner le logo */
 .burger-nav {
     position: relative;
-    /* Permet de positionner les éléments enfants avec position absolue */
     width: 100%;
-    /* Le menu burger occupe toute la largeur */
 }
 
 /* Logo en haut à droite */
 .logo-container {
     position: absolute;
     top: 1rem;
-    /* Augmenter l'espace du logo par rapport au haut */
     right: 4rem;
-    /* Augmenter l'espace du logo par rapport au côté droit */
     width: 8rem;
-    /* Ajuste la taille du logo */
     height: auto;
-    /* Garde les proportions */
 }
 
 /* Bouton du menu burger */
 .burger-btn {
     position: absolute;
     top: 1rem;
-    /* Positionne le bouton burger à 1rem du haut */
     left: 1rem;
-    /* Positionne le bouton burger à 1rem du côté gauche */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -155,7 +79,6 @@ body {
 .burger-btn span {
     display: block;
     height: 0.29rem;
-    /* Hauteur de chaque barre */
     width: 160%;
     background-color: #fff;
     border-radius: 0.125rem;
@@ -172,7 +95,7 @@ body {
     height: 100vh;
     /* Pleine hauteur */
     background:
-        url(../img/desktop/lines-dark-desktop.png) no-repeat center,
+        url(../img/desktop/lines-dark-desktop.webp) no-repeat center,
         linear-gradient(to bottom, #0F2C3E, #000);
     background-size: auto;
     transform: translateY(-100%);
@@ -181,9 +104,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Centre les éléments horizontalement */
     padding-top: 3rem;
-    /* Espace au-dessus du menu */
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -217,28 +138,23 @@ body {
     padding: 0;
     text-align: center;
     margin-top: 5rem;
-    /* Espace sous le logo */
     width: 100%;
-    /* Occupe toute la largeur */
 }
 
 .burger-nav ul li {
     margin: 2rem 0;
-    /* Espacement entre les éléments du menu */
 }
 
 .burger-nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 2rem;
-    /* Taille de police en rem */
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .burger-nav ul li a:hover {
     color: #1D6A75;
-    /* Change la couleur au survol */
 }
 
 /* Menu visible */
@@ -252,13 +168,12 @@ body {
 }
 
 .mobile-menu h1 {
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 .banniere-card {
     width: 100%;
     object-fit: cover;
-    /* Assure que l'image couvre toute la largeur et hauteur */
 }
 
 .burger-menu.open .burger-nav {
@@ -268,12 +183,10 @@ body {
 
 .desktop-menu {
     display: none;
-    /* Cache le menu classique en mobile */
 }
 
 .burger-menu {
     display: block;
-    /* Garde le menu burger en mobile */
 }
 
 /* PAGE D'ACCUEIL INDEX*/
@@ -304,10 +217,10 @@ a.button {
     line-height: 2.7rem;
     padding: 0 1.5rem;
     border-radius: 1.5rem;
-    background-color: #1D6A75;
+    background-color: #37B0C3;
     color: #000000;
     text-decoration: none;
-    box-shadow: 0 2px 2px #1D6A75;
+    box-shadow: 0 2px 2px #37B0C3;
     font-family: "Cinzel", serif;
     font-weight: bold;
     font-size: .8rem;
@@ -349,15 +262,11 @@ main {
     position: absolute;
     /* Pour positionner le texte */
     top: 80%;
-    /* Place le texte au milieu verticalement */
     left: 50%;
-    /* Place le texte au milieu horizontalement */
     transform: translate(-50%, -50%);
     /* Centrage exact */
     color: white;
-    /* Texte blanc */
     font-size: .8rem;
-    /* Taille du texte */
     text-align: center;
     font-family: "Lora", serif;
     text-transform: uppercase;
@@ -365,6 +274,7 @@ main {
 }
 
 .card img {
+    width: 70%;
     transform: scale(1);
     transition: all .3s ease;
 }
@@ -378,12 +288,10 @@ main {
 .card:hover .text-overlay {
     color: #1D6A75;
     transform: translate(-50%, -50%) scale(1.1);
-    /* Légèrement plus grand */
 }
 
 .desktop-banner {
     display: none;
-    /* Par défaut, cachée */
 }
 
 .banner-subtext {
@@ -667,7 +575,6 @@ input[type="text"], textarea {
 
     .burger-menu {
         display: none;
-        /* enleve le menu burger en desktop */
     }
 
 
@@ -676,12 +583,10 @@ input[type="text"], textarea {
         justify-content: center;
         align-items: center;
         margin-top: 10px;
-        /* Ajuste cet espace si nécessaire */
     }
 
     .social-links a {
         margin-right: 15px;
-        /* Assure qu'il y a de l'espace entre les icônes */
         display: inline-block;
     }
 
@@ -704,7 +609,6 @@ input[type="text"], textarea {
     .desktop-join-us {
         display: flex;
         align-items: center;
-        /* Aligne le texte et les icônes au centre verticalement */
     }
 
     .desktop-join-us a {
@@ -717,22 +621,18 @@ input[type="text"], textarea {
 
     .social-links {
         display: flex;
-        /* Pour aligner les icônes horizontalement */
     }
 
     .social-links a {
         margin-right: 10px;
-        /* Espacement entre les icônes */
     }
 
     .social-links i {
         font-size: 2rem;
-        /* Ajuste la taille des icônes */
     }
 
     .social-links a:focus {
         color: #0F2C3E;
-        /* Changer la couleur des icônes au survol */
     }
 
 
@@ -749,15 +649,12 @@ input[type="text"], textarea {
     }
 
 
-    /* Ajuste la taille des icônes */
     .social-links i {
         font-size: 2.5rem;
-        /* Plus grand si nécessaire */
     }
 
     .hide-menu {
         top: -10rem;
-        /* Cache le menu en le déplaçant au-dessus de l'écran */
     }
 
     .desktop-menu ul {
@@ -802,7 +699,7 @@ input[type="text"], textarea {
 
     .desktop-banner {
         position: relative;
-        /* Permet de positionner le texte à l'intérieur de la bannière */
+        /* Positionner le texte à l'intérieur de la bannière */
         display: block;
         margin-top: 6%;
         width: 100%;
@@ -812,7 +709,6 @@ input[type="text"], textarea {
     .desktop-banner img {
         width: 100%;
         object-fit: cover;
-        /* Assure que l'image couvre toute la largeur et hauteur */
     }
 
     .banner-text {
@@ -821,7 +717,6 @@ input[type="text"], textarea {
         top: 85%;
         left: 50%;
         transform: translate(-50%, -50%);
-        /* Ajuste précisément pour centrer */
         color: white;
         font-size: 1.25rem;
         font-weight: bold;
@@ -850,7 +745,10 @@ input[type="text"], textarea {
     .text-overlay {
         font-size: 1.25rem;
         top: 90%;
-        /* Place le texte au milieu verticalement */
+    }
+    
+    .card a img {
+        width: 68%;
     }
 
     .card a img {
@@ -862,11 +760,11 @@ input[type="text"], textarea {
     }
 
     .card:nth-child(3) a img {
-        content: url(../img/desktop/chupacabra-desktop.png);
+        content: url(../img/desktop/chupacabra-desktop.webp);
     }
 
     .card:nth-child(4) a img {
-        content: url(../img/desktop/atlantide-desktop.png);
+        content: url(../img/desktop/atlantide-desktop.webp);
     }
 
     .card:nth-child(5) a img {
@@ -878,15 +776,15 @@ input[type="text"], textarea {
     }
 
     .card:nth-child(7) a img {
-        content: url(../img/desktop/nurarhyion-desktop.png);
+        content: url(../img/desktop/nurarhyion-desktop.webp);
     }
 
     .card:nth-child(8) a img {
-        content: url(../img/desktop/minotaure-desktop.png);
+        content: url(../img/desktop/minotaure-desktop.webp);
     }
 
     .card:nth-child(9) a img {
-        content: url(../img/desktop/bermude-desktop.png);
+        content: url(../img/desktop/bermude-desktop.webp);
     }
 
     .card:nth-child(10) a img {
@@ -924,7 +822,7 @@ input[type="text"], textarea {
     }
 
     .card-category:nth-child(3) a img {
-        content: url(../img/desktop/phenomene-inexplique-anomalie-desktop.png);
+        content: url(../img/desktop/phenomene-inexplique-anomalie-desktop.webp);
     }
 
     .card-category:nth-child(4) a img {
@@ -945,7 +843,7 @@ input[type="text"], textarea {
     }
 
     .card-creature:nth-child(3) a img {
-        content: url(../img/desktop/nurarhyion-desktop.png);
+        content: url(../img/desktop/nurarhyion-desktop.webp);
     }
 
     .card-creature:nth-child(4) a img {
@@ -953,11 +851,11 @@ input[type="text"], textarea {
     }
 
     .card-creature:nth-child(5) a img {
-        content: url(../img/desktop/minotaure-desktop.png);
+        content: url(../img/desktop/minotaure-desktop.webp);
     }
 
     .card-creature:nth-child(6) a img {
-        content: url(../img/desktop/chupacabra-desktop.png);
+        content: url(../img/desktop/chupacabra-desktop.webp);
     }
 
     .card-creature:nth-child(7) a img {
@@ -983,7 +881,7 @@ input[type="text"], textarea {
     }
 
     .card-dimension:nth-child(2) a img {
-        content: url(../img/desktop/atlantide-desktop.png);
+        content: url(../img/desktop/atlantide-desktop.webp);
     }
 
     .card-dimension:nth-child(3) a img {
@@ -991,7 +889,7 @@ input[type="text"], textarea {
     }
 
     .card-dimension:nth-child(4) a img {
-        content: url(../img/desktop/bermude-desktop.png);
+        content: url(../img/desktop/bermude-desktop.webp);
     }
 
     /* PHENOMENE INEXPLIQUES ANOMALIES*/
@@ -1009,7 +907,7 @@ input[type="text"], textarea {
     }
 
     .card-phenomene:nth-child(4) a img {
-        content: url(../img/desktop/atlantide-desktop.png)
+        content: url(../img/desktop/atlantide-desktop.webp)
     }
 
     .card-phenomene:nth-child(5) a img {
@@ -1116,8 +1014,6 @@ input[type="text"], textarea {
 
     /*EASTER EGGS*/
 
-
-    /* Style pour la vidéo en arrière-plan */
     .video-background {
         position: fixed;
         top: 0;
@@ -1126,7 +1022,6 @@ input[type="text"], textarea {
         height: 100%;
         overflow: hidden;
         z-index: -1;
-        /* Assure que la vidéo reste derrière le contenu */
     }
 
     /* Positionnement de la vidéo */
@@ -1137,7 +1032,6 @@ input[type="text"], textarea {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* Assure que la vidéo couvre toute la zone */
         transform: translate(-50%, -50%);
     }
 
@@ -1153,25 +1047,43 @@ input[type="text"], textarea {
         background: rgba(0, 0, 0, 0.5);
         /* Couche semi-transparente pour améliorer la lisibilité */
         padding: 20px;
-        /* Un peu d'espace autour du texte */
         border-radius: 10px;
-        /* Coins arrondis pour le texte */
         z-index: 1;
-        /* S'assurer que le texte est au-dessus de la vidéo */
     }
 
     .content h1 {
         font-size: 3rem;
-        /* Ajuste la taille du titre */
     }
 
     .content p {
         font-size: 1.5rem;
-        /* Ajuste la taille du texte */
     }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1247,7 +1159,6 @@ input[type="text"], textarea {
 @keyframes fallShrink {
     0% {
         transform: translateY(0) scale(1);
-        /* Position initiale et taille normale */
     }
 
     50% {
@@ -1331,7 +1242,6 @@ body.falling-background::before {
     z-index: 6666;
     opacity: 0;
     animation: jumpIn 0.5s ease forwards;
-    /* Animation d'apparition */
 }
 
 /* Animation de l'apparition du jumpscare */
